@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='robots' content='noindex,nofollow' />
     <title>D&D у Києві | Настільні рольові ігри</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <style>
         /* Base Styles */
         body {
@@ -22,13 +24,11 @@
         }
 
         .diagonal-lines {
-            background: repeating-linear-gradient(
-                45deg,
-                transparent,
-                transparent 10px,
-                rgba(0, 0, 0, 0.03) 10px,
-                rgba(0, 0, 0, 0.03) 20px
-            );
+            background: repeating-linear-gradient(45deg,
+                    transparent,
+                    transparent 10px,
+                    rgba(0, 0, 0, 0.03) 10px,
+                    rgba(0, 0, 0, 0.03) 20px);
         }
 
         .section-divider {
@@ -57,7 +57,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(to right bottom, transparent, rgba(255,255,255,0.2));
+            background: linear-gradient(to right bottom, transparent, rgba(255, 255, 255, 0.2));
             opacity: 0;
             transition: opacity 0.3s ease;
         }
@@ -112,55 +112,119 @@
         /* Add more gaming icons here */
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
-<nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-stone-200">
-    <div class="container mx-auto px-4">
-        <div class="flex justify-between items-center h-16">
-            <a href="#" class="text-stone-800 font-bold text-xl flex items-center gap-2">
-                <span class="icon-d20 text-2xl"></span>
-                DnD Київ
-            </a>
-            
-            <div class="hidden md:flex gap-8">
-                <a href="#games" class="text-stone-600 hover:text-stone-900">Ігри</a>
-                <a href="#community" class="text-stone-600 hover:text-stone-900">Спільнота</a>
-                <a href="#schedule" class="text-stone-600 hover:text-stone-900">Розклад</a>
-                <a href="#about" class="text-stone-600 hover:text-stone-900">Про мене</a>
-            </div>
-            
-            <button class="bg-stone-800 text-white px-6 py-2 rounded-lg hover:bg-stone-700">
-                Приєднатися
-            </button>
-        </div>
-    </div>
-</nav>
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-stone-200">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo and Main Nav -->
+                <div class="flex items-center gap-8">
+                    <!-- Logo -->
+                    <a href="#" class="text-stone-800 font-bold text-xl flex items-center gap-2">
+                        <span class="icon-d20 text-2xl"></span>
+                        DnD Київ
+                    </a>
 
-<!-- Hero Section -->
-<header class="pt-24 pb-16 relative overflow-hidden">
-    <div class="pattern-grid absolute inset-0"></div>
-    <div class="container mx-auto px-4 relative">
-        <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-12">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6 text-stone-800">
-                    Створіть свою історію
-                </h1>
-                <p class="text-xl text-stone-600 mb-8">
-                    Приєднуйтесь до захоплюючих пригод у світі Dungeons & Dragons
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button class="bg-stone-800 text-white px-8 py-4 rounded-lg hover:bg-stone-700 flex items-center justify-center gap-2">
-                        <span class="icon-d20"></span>
-                        Почати пригоду
-                    </button>
-                    <button class="border-2 border-stone-300 px-8 py-4 rounded-lg hover:bg-stone-50">
-                        Дізнатись більше
+                    <!-- Desktop Navigation -->
+                    <div class="hidden md:flex items-center gap-8">
+                        <a href="#how-it-works" class="text-stone-600 hover:text-stone-900 transition-colors">
+                            Як це працює
+                        </a>
+                        <a href="#game-types" class="text-stone-600 hover:text-stone-900 transition-colors">
+                            Формати гри
+                        </a>
+                        <a href="#news" class="text-stone-600 hover:text-stone-900 transition-colors">
+                            Новини
+                        </a>
+                        <a href="#about" class="text-stone-600 hover:text-stone-900 transition-colors">
+                            Про мене
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Side Actions -->
+                <div class="flex items-center gap-4">
+                    <!-- Charity Link -->
+                    <a href="https://linktr.ee/ravensofhope" target="_blank" rel="noopener noreferrer"
+                        class="hidden md:flex items-center gap-2 px-3 py-1.5 bg-grey-100 text-yellow-800 rounded-lg hover:bg-yellow-200 transition-colors">
+                        <img width=30 height=30
+                            src="https://ugc.production.linktr.ee/0927229c-2623-44a5-bffa-33d95c3446a5_420961735-1982718142114608-5846339976915558242-n.jpeg?io=true&size=avatar-v3_0" />
+                        <span class="font-medium">Підтримати ЗСУ</span>
+                    </a>
+
+                    <!-- Book Button -->
+                    <a href="#sessions"
+                        class="hidden md:block bg-stone-800 text-white px-4 py-2 rounded-lg hover:bg-stone-700 transition-colors">
+                        Записатись
+                    </a>
+
+                    <!-- Mobile Menu Button -->
+                    <button type="button" class="md:hidden text-stone-600 hover:text-stone-900"
+                        aria-label="Відкрити меню">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
                     </button>
                 </div>
             </div>
-            
-            <!-- Featured Image -->
-            <div class="relative rounded-xl overflow-hidden shadow-2xl">
+        </div>
+
+        <!-- Mobile Menu (hidden by default) -->
+        <div class="hidden md:hidden bg-white border-b border-stone-200 px-4 py-2">
+            <div class="space-y-3">
+                <a href="#how-it-works" class="block text-stone-600 hover:text-stone-900 transition-colors">
+                    Як це працює
+                </a>
+                <a href="#game-types" class="block text-stone-600 hover:text-stone-900 transition-colors">
+                    Формати гри
+                </a>
+                <a href="#news" class="block text-stone-600 hover:text-stone-900 transition-colors">
+                    Новини
+                </a>
+                <a href="#about" class="block text-stone-600 hover:text-stone-900 transition-colors">
+                    Про мене
+                </a>
+                <!-- Mobile Charity Link -->
+                <a href="https://savelife.in.ua/en/" target="_blank" rel="noopener noreferrer"
+                    class="flex items-center gap-2 text-yellow-800">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                    <span>Підтримати ЗСУ</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-24 pb-16 relative overflow-hidden">
+        <div class="pattern-grid absolute inset-0"></div>
+        <div class="container mx-auto px-4 relative">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 text-stone-800">
+                        Створіть свою історію
+                    </h1>
+                    <p class="text-xl text-stone-600 mb-8">
+                        Приєднуйтесь до захоплюючих пригод у світі Dungeons & Dragons
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button
+                            class="bg-stone-800 text-white px-8 py-4 rounded-lg hover:bg-stone-700 flex items-center justify-center gap-2">
+                            <span class="icon-d20"></span>
+                            Почати пригоду
+                        </button>
+                        <button class="border-2 border-stone-300 px-8 py-4 rounded-lg hover:bg-stone-50">
+                            Дізнатись більше
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Featured Image -->
+                <!-- <div class="relative rounded-xl overflow-hidden shadow-2xl">
                 <img src="https://place-hold.it/1200x600" alt="D&D Session" class="w-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
@@ -169,366 +233,691 @@
                         <span class="px-3 py-1 bg-white/20 rounded-full text-sm">Офлайн/Онлайн</span>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</header>
+            </div> -->
 
-<!-- Community Highlights -->
-<section class="py-24 bg-stone-100">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl font-bold text-stone-800 mb-4">Наша спільнота</h2>
-            <p class="text-stone-600">Приєднуйтесь до 200+ гравців у Києві</p>
-        </div>
-        
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Community Cards -->
-            <div class="bg-white rounded-xl p-6 hover-card">
-                <div class="h-48 mb-4 rounded-lg overflow-hidden">
-                    <img src="https://place-hold.it/400x300" alt="Session" class="w-full h-full object-cover">
-                </div>
-                <h3 class="text-xl font-bold mb-2">Щотижневі ігри</h3>
-                <p class="text-stone-600">Регулярні сесії для новачків та досвідчених гравців</p>
-            </div>
-
-            <div class="bg-white rounded-xl p-6 hover-card">
-                <div class="h-48 mb-4 rounded-lg overflow-hidden">
-                    <img src="https://place-hold.it/400x300" alt="Community" class="w-full h-full object-cover">
-                </div>
-                <h3 class="text-xl font-bold mb-2">Discord спільнота</h3>
-                <p class="text-stone-600">Обговорення, поради та пошук групи онлайн</p>
-            </div>
-
-            <div class="bg-white rounded-xl p-6 hover-card">
-                <div class="h-48 mb-4 rounded-lg overflow-hidden">
-                    <img src="https://place-hold.it/400x300" alt="Events" class="w-full h-full object-cover">
-                </div>
-                <h3 class="text-xl font-bold mb-2">Спеціальні події</h3>
-                <p class="text-stone-600">Одноденні пригоди та тематичні зустрічі</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Game Types -->
-<section class="py-24 relative overflow-hidden">
-    <div class="diagonal-lines absolute inset-0"></div>
-    <div class="container mx-auto px-4 relative">
-        <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-stone-800 mb-4">Оберіть свій формат</h2>
-                <p class="text-stone-600">Від перших кроків до епічних кампаній</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Game Type Cards -->
-                <div class="bg-white rounded-xl p-8 shadow-lg hover-card">
-                    <div class="flex justify-between items-start mb-6">
-                        <div>
-                            <h3 class="text-2xl font-bold text-stone-800 mb-2">Пробна гра</h3>
-                            <p class="text-stone-600">Перше знайомство зі світом D&D</p>
-                        </div>
-                        <span class="text-2xl font-bold text-stone-800">400₴</span>
-                    </div>
-                    
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-center gap-3">
-                            <span class="w-5 h-5 rounded-full bg-stone-100 flex items-center justify-center">
-                                <span class="icon-d20 text-stone-600 text-sm"></span>
-                            </span>
-                            <span class="text-stone-700">2 години гри</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <span class="w-5 h-5 rounded-full bg-stone-100 flex items-center justify-center">
-                                <span class="icon-d20 text-stone-600 text-sm"></span>
-                            </span>
-                            <span class="text-stone-700">Базові правила</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <span class="w-5 h-5 rounded-full bg-stone-100 flex items-center justify-center">
-                                <span class="icon-d20 text-stone-600 text-sm"></span>
-                            </span>
-                            <span class="text-stone-700">Готовий персонаж</span>
-                        </li>
-                    </ul>
-                    
-                    <button class="w-full bg-stone-800 text-white py-3 rounded-lg hover:bg-stone-700">
-                        Забронювати
-                    </button>
-                </div>
-
-                <div class="bg-white rounded-xl p-8 shadow-lg hover-card">
-                    <div class="flex justify-between items-start mb-6">
-                        <div>
-                            <h3 class="text-2xl font-bold text-stone-800 mb-2">Повна сесія</h3>
-                            <p class="text-stone-600">Повноцінна гра з розвитком персонажа</p>
-                        </div>
-                        <span class="text-2xl font-bold text-stone-800">600₴</span>
-                    </div>
-                    
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-center gap-3">
-                            <span class="w-5 h-5 rounded-full bg-stone-100 flex items-center justify-center">
-                                <span class="icon-d20 text-stone-600 text-sm"></span>
-                            </span>
-                            <span class="text-stone-700">4 години гри</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <span class="w-5 h-5 rounded-full bg-stone-100 flex items-center justify-center">
-                                <span class="icon-d20 text-stone-600 text-sm"></span>
-                            </span>
-                            <span class="text-stone-700">Повні правила</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <span class="w-5 h-5 rounded-full bg-stone-100 flex items-center justify-center">
-                                <span class="icon-d20 text-stone-600 text-sm"></span>
-                            </span>
-                            <span class="text-stone-700">Створення персонажа</span>
-                        </li>
-                    </ul>
-                    
-                    <button class="w-full bg-stone-800 text-white py-3 rounded-lg hover:bg-stone-700">
-                        Забронювати
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Latest Sessions -->
-<section class="py-24 bg-stone-100">
-    <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-stone-800 mb-16 text-center">Останні пригоди</h2>
-        
-        <div class="grid md:grid-cols-3 gap-8">
-            <!-- Session Cards -->
-            <div class="bg-white rounded-xl overflow-hidden hover-card">
-                <img src="https://place-hold.it/400x250" alt="Session 1" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <div class="flex gap-2 mb-4">
-                        <span class="px-3 py-1 bg-stone-100 rounded-full text-sm text-stone-600">Кампанія</span>
-                        <span class="px-3 py-1 bg-stone-100 rounded-full text-sm text-stone-600">5 гравців</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Підземелля Дракона</h3>
-                    <p class="text-stone-600 mb-4">Епічна пригода в древніх печерах</p>
-                    <div class="flex items-center gap-2">
-                        <img src="https://place-hold.it/32x32" alt="DM" class="w-8 h-8 rounded-full">
-                        <span class="text-stone-600">Майстер Андрій</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Add 2 more similar session cards -->
-        </div>
-    </div>
-</section>
-
-<!-- Community Feed -->
-<section class="py-24">
-    <div class="container mx-auto px-4">
-        <div class="max-w-5xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-16">
-                <!-- Discord Preview -->
-                <div>
-                    <h3 class="text-2xl font-bold text-stone-800 mb-6">Discord спільнота</h3>
-                    <div class="bg-white rounded-xl p-6 shadow-lg">
-                        <div class="space-y-4">
-                            <div class="flex items-start gap-4">
-                                <img src="https://place-hold.it/40x40" alt="User" class="w-10 h-10 rounded-full">
-                                <div>
-                                    <div class="flex items-center gap-2">
-                                        <span class="font-bold text-stone-800">Олександр</span>
-                                        <span class="text-stone-500 text-sm">Вчора</span>
-                                    </div>
-                                    <p class="text-stone-600">Шукаю групу для регулярних ігор. Новачок, але дуже хочу навчитись!</p>
-                                </div>
+                <div class="grid md:grid-cols-3 gap-8" id="sessions">
+                    <!-- Session Cards -->
+                    <div class="bg-white rounded-xl overflow-hidden hover-card">
+                        <img src="https://place-hold.it/400x250" alt="Session 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-4">
+                                <span class="px-3 py-1 bg-stone-100 rounded-full text-sm text-stone-600">Кампанія</span>
+                                <span class="px-3 py-1 bg-stone-100 rounded-full text-sm text-stone-600">5
+                                    гравців</span>
                             </div>
-                            <!-- Add 2-3 more chat messages -->
+                            <h3 class="text-xl font-bold mb-2">Підземелля Дракона</h3>
+                            <p class="text-stone-600 mb-4">Епічна пригода в древніх печерах</p>
+                            <div class="flex items-center gap-2">
+                                <button
+                                    class="bg-stone-800 text-white px-8 py-4 rounded-lg hover:bg-stone-700 flex items-center justify-center gap-2">
+                                    <span class="icon-d20"></span>
+                                    Приєднатися
+                                </button>
+                            </div>
                         </div>
-                        <button class="w-full mt-6 border-2 border-stone-200 py-2 rounded-lg text-stone-600 hover:bg-stone-50">
-                            Приєднатися до Discord
+                    </div>
+
+                    <!-- Add 2 more similar session cards -->
+
+                    <div class="bg-white rounded-xl overflow-hidden hover-card">
+                        <img src="https://place-hold.it/400x250" alt="Session 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-4">
+                                <span class="px-3 py-1 bg-stone-100 rounded-full text-sm text-stone-600">Кампанія</span>
+                                <span class="px-3 py-1 bg-stone-100 rounded-full text-sm text-stone-600">5
+                                    гравців</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Підземелля Дракона</h3>
+                            <p class="text-stone-600 mb-4">Епічна пригода в древніх печерах</p>
+                            <div class="flex items-center gap-2">
+                                <button
+                                    class="bg-stone-800 text-white px-8 py-4 rounded-lg hover:bg-stone-700 flex items-center justify-center gap-2">
+                                    <span class="icon-d20"></span>
+                                    Приєднатися
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl overflow-hidden hover-card">
+                        <img src="https://place-hold.it/400x250" alt="Session 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-4">
+                                <span class="px-3 py-1 bg-stone-100 rounded-full text-sm text-stone-600">Кампанія</span>
+                                <span class="px-3 py-1 bg-stone-100 rounded-full text-sm text-stone-600">5
+                                    гравців</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Підземелля Дракона</h3>
+                            <p class="text-stone-600 mb-4">Епічна пригода в древніх печерах</p>
+                            <div class="flex items-center gap-2">
+                                <button
+                                    class="bg-stone-800 text-white px-8 py-4 rounded-lg hover:bg-stone-700 flex items-center justify-center gap-2">
+                                    <span class="icon-d20"></span>
+                                    Приєднатися
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl overflow-hidden hover-card">
+                        <img src="https://place-hold.it/400x250" alt="Session 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-4">
+                                <span class="px-3 py-1 bg-stone-100 rounded-full text-sm text-stone-600">Кампанія</span>
+                                <span class="px-3 py-1 bg-stone-100 rounded-full text-sm text-stone-600">5
+                                    гравців</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Підземелля Дракона</h3>
+                            <p class="text-stone-600 mb-4">Епічна пригода в древніх печерах</p>
+                            <div class="flex items-center gap-2">
+                                <button
+                                    class="bg-stone-800 text-white px-8 py-4 rounded-lg hover:bg-stone-700 flex items-center justify-center gap-2">
+                                    <span class="icon-d20"></span>
+                                    Приєднатися
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl overflow-hidden hover-card">
+                        <img src="https://place-hold.it/400x250" alt="Session 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-4">
+                                <span class="px-3 py-1 bg-stone-100 rounded-full text-sm text-stone-600">Кампанія</span>
+                                <span class="px-3 py-1 bg-stone-100 rounded-full text-sm text-stone-600">5
+                                    гравців</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Підземелля Дракона</h3>
+                            <p class="text-stone-600 mb-4">Епічна пригода в древніх печерах</p>
+                            <div class="flex items-center gap-2">
+                                <button
+                                    class="bg-stone-800 text-white px-8 py-4 rounded-lg hover:bg-stone-700 flex items-center justify-center gap-2">
+                                    <span class="icon-d20"></span>
+                                    Приєднатися
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl overflow-hidden hover-card">
+                        <img src="https://place-hold.it/400x250" alt="Session 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-4">
+                                <span class="px-3 py-1 bg-stone-100 rounded-full text-sm text-stone-600">Кампанія</span>
+                                <span class="px-3 py-1 bg-stone-100 rounded-full text-sm text-stone-600">5
+                                    гравців</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Підземелля Дракона</h3>
+                            <p class="text-stone-600 mb-4">Епічна пригода в древніх печерах</p>
+                            <div class="flex items-center gap-2">
+                                <button
+                                    class="bg-stone-800 text-white px-8 py-4 rounded-lg hover:bg-stone-700 flex items-center justify-center gap-2">
+                                    <span class="icon-d20"></span>
+                                    Приєднатися
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl overflow-hidden hover-card">
+                        <img src="https://place-hold.it/400x250" alt="Session 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex gap-2 mb-4">
+                                <span class="px-3 py-1 bg-stone-100 rounded-full text-sm text-stone-600">Кампанія</span>
+                                <span class="px-3 py-1 bg-stone-100 rounded-full text-sm text-stone-600">5
+                                    гравців</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2">Підземелля Дракона</h3>
+                            <p class="text-stone-600 mb-4">Епічна пригода в древніх печерах</p>
+                            <div class="flex items-center gap-2">
+                                <button
+                                    class="bg-stone-800 text-white px-8 py-4 rounded-lg hover:bg-stone-700 flex items-center justify-center gap-2">
+                                    <span class="icon-d20"></span>
+                                    Приєднатися
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-24 bg-stone-100" id="how-it-works">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-stone-800 mb-4">Як проходять ігри</h2>
+                    <p class="text-stone-600">Все що потрібно знати перед першою грою</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- What to Expect -->
+                    <div class="bg-white rounded-xl p-8 shadow-lg hover-card">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-12 h-12 bg-stone-100 rounded-lg flex items-center justify-center">
+                                <span class="icon-d20 text-2xl text-stone-600"></span>
+                            </div>
+                            <h3 class="text-xl font-bold text-stone-800">Що очікувати</h3>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex gap-3">
+                                <span
+                                    class="w-5 h-5 rounded-full bg-stone-100 flex-shrink-0 flex items-center justify-center mt-0.5">
+                                    <span class="icon-d20 text-stone-600 text-sm"></span>
+                                </span>
+                                <span class="text-stone-600">Знайомство з групою та базовими правилами (15-20 хв)</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span
+                                    class="w-5 h-5 rounded-full bg-stone-100 flex-shrink-0 flex items-center justify-center mt-0.5">
+                                    <span class="icon-d20 text-stone-600 text-sm"></span>
+                                </span>
+                                <span class="text-stone-600">Створення або вибір готового персонажа (20-30 хв)</span>
+                            </li>
+                            <li class="flex gap-3">
+                                <span
+                                    class="w-5 h-5 rounded-full bg-stone-100 flex-shrink-0 flex items-center justify-center mt-0.5">
+                                    <span class="icon-d20 text-stone-600 text-sm"></span>
+                                </span>
+                                <span class="text-stone-600">Основна гра з перервами за потреби</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- What to Bring -->
+                    <div class="bg-white rounded-xl p-8 shadow-lg hover-card">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-12 h-12 bg-stone-100 rounded-lg flex items-center justify-center">
+                                <span class="icon-d20 text-2xl text-stone-600"></span>
+                            </div>
+                            <h3 class="text-xl font-bold text-stone-800">Що потрібно</h3>
+                        </div>
+                        <ul class="space-y-4">
+                            <li class="flex gap-3">
+                                <span
+                                    class="w-5 h-5 rounded-full bg-stone-100 flex-shrink-0 flex items-center justify-center mt-0.5">
+                                    <span class="icon-d20 text-stone-600 text-sm"></span>
+                                </span>
+                                <div>
+                                    <span class="text-stone-800 font-medium">Для офлайн гри:</span>
+                                    <p class="text-stone-600">Ручка та хороший настрій. Всі матеріали надаються</p>
+                                </div>
+                            </li>
+                            <li class="flex gap-3">
+                                <span
+                                    class="w-5 h-5 rounded-full bg-stone-100 flex-shrink-0 flex items-center justify-center mt-0.5">
+                                    <span class="icon-d20 text-stone-600 text-sm"></span>
+                                </span>
+                                <div>
+                                    <span class="text-stone-800 font-medium">Для онлайн гри:</span>
+                                    <p class="text-stone-600">Комп'ютер з мікрофоном, стабільний інтернет та Discord</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-12 bg-white rounded-xl p-8 shadow-lg">
+                    <h3 class="text-xl font-bold text-stone-800 mb-6">Часті питання</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <p class="font-medium text-stone-800 mb-2">Чи потрібен попередній досвід?</p>
+                            <p class="text-stone-600">Ні, ми раді як новачкам, так і досвідченим гравцям. Всі правила
+                                пояснюємо.</p>
+                        </div>
+                        <div>
+                            <p class="font-medium text-stone-800 mb-2">Скільки людей у групі?</p>
+                            <p class="text-stone-600">Зазвичай 4-5 гравців для комфортної гри та взаємодії.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Highlights -->
+    <section class="py-24 bg-stone-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-stone-800 mb-4">Наша спільнота</h2>
+                <p class="text-stone-600">Приєднуйтесь до 200+ гравців у Києві</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Community Cards -->
+                <div class="bg-white rounded-xl p-6 hover-card">
+                    <div class="h-48 mb-4 rounded-lg overflow-hidden">
+                        <img src="https://place-hold.it/400x300" alt="Session" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Щотижневі ігри</h3>
+                    <p class="text-stone-600">Регулярні сесії для новачків та досвідчених гравців</p>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 hover-card">
+                    <div class="h-48 mb-4 rounded-lg overflow-hidden">
+                        <img src="https://place-hold.it/400x300" alt="Community" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Discord спільнота</h3>
+                    <p class="text-stone-600">Обговорення, поради та пошук групи онлайн</p>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 hover-card">
+                    <div class="h-48 mb-4 rounded-lg overflow-hidden">
+                        <img src="https://place-hold.it/400x300" alt="Events" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Спеціальні події</h3>
+                    <p class="text-stone-600">Одноденні пригоди та тематичні зустрічі</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Types -->
+    <section class="py-24 relative overflow-hidden" id="game-types">
+        <div class="diagonal-lines absolute inset-0"></div>
+        <div class="container mx-auto px-4 relative">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-stone-800 mb-4">Оберіть свій формат</h2>
+                    <p class="text-stone-600">Від перших кроків до епічних кампаній</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Game Type Cards -->
+                    <div class="bg-white rounded-xl p-8 shadow-lg hover-card">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-2xl font-bold text-stone-800 mb-2">Пробна гра</h3>
+                                <p class="text-stone-600">Перше знайомство зі світом D&D</p>
+                            </div>
+                            <span class="text-2xl font-bold text-stone-800">400₴</span>
+                        </div>
+
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-stone-100 flex items-center justify-center">
+                                    <span class="icon-d20 text-stone-600 text-sm"></span>
+                                </span>
+                                <span class="text-stone-700">2 години гри</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-stone-100 flex items-center justify-center">
+                                    <span class="icon-d20 text-stone-600 text-sm"></span>
+                                </span>
+                                <span class="text-stone-700">Базові правила</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-stone-100 flex items-center justify-center">
+                                    <span class="icon-d20 text-stone-600 text-sm"></span>
+                                </span>
+                                <span class="text-stone-700">Готовий персонаж</span>
+                            </li>
+                        </ul>
+
+                        <button class="w-full bg-stone-800 text-white py-3 rounded-lg hover:bg-stone-700">
+                            Забронювати
+                        </button>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-8 shadow-lg hover-card">
+                        <div class="flex justify-between items-start mb-6">
+                            <div>
+                                <h3 class="text-2xl font-bold text-stone-800 mb-2">Повна сесія</h3>
+                                <p class="text-stone-600">Повноцінна гра з розвитком персонажа</p>
+                            </div>
+                            <span class="text-2xl font-bold text-stone-800">600₴</span>
+                        </div>
+
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-stone-100 flex items-center justify-center">
+                                    <span class="icon-d20 text-stone-600 text-sm"></span>
+                                </span>
+                                <span class="text-stone-700">4 години гри</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-stone-100 flex items-center justify-center">
+                                    <span class="icon-d20 text-stone-600 text-sm"></span>
+                                </span>
+                                <span class="text-stone-700">Повні правила</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="w-5 h-5 rounded-full bg-stone-100 flex items-center justify-center">
+                                    <span class="icon-d20 text-stone-600 text-sm"></span>
+                                </span>
+                                <span class="text-stone-700">Створення персонажа</span>
+                            </li>
+                        </ul>
+
+                        <button class="w-full bg-stone-800 text-white py-3 rounded-lg hover:bg-stone-700">
+                            Забронювати
                         </button>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Upcoming Events -->
-                <div>
-                    <h3 class="text-2xl font-bold text-stone-800 mb-6">Найближчі події</h3>
-                    <div class="space-y-4">
-                        <div class="bg-white rounded-xl p-6 shadow-lg hover-card">
-                            <div class="flex gap-4">
-                                <div class="w-16 text-center">
-                                    <div class="text-2xl font-bold text-stone-800">23</div>
-                                    <div class="text-stone-500">Груд</div>
+    <!-- Community Feed -->
+    <section class="py-24" id="news">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-3xl font-bold text-stone-800 text-center mb-16">Новини та події</h2>
+
+                <!-- Featured Event -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-12 hover-card">
+                    <div class="md:flex">
+                        <div class="md:w-2/5">
+                            <img src="https://place-hold.it/600x400" alt="Featured Event"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-8 md:w-3/5">
+                            <div class="flex gap-2 mb-4">
+                                <span class="px-3 py-1 bg-stone-100 rounded-full text-sm text-stone-600">Спеціальна
+                                    подія</span>
+                                <span class="px-3 py-1 bg-stone-100 rounded-full text-sm text-stone-600">28
+                                    грудня</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-stone-800 mb-4">Різдвяна пригода</h3>
+                            <p class="text-stone-600 mb-6">Святкова одноразова гра з унікальними подарунками та
+                                святковою атмосферою. Підходить для новачків!</p>
+                            <button class="px-6 py-2 bg-stone-800 text-white rounded-lg hover:bg-stone-700">
+                                Дізнатись більше
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- News Grid -->
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <!-- Upcoming Events Column -->
+                    <div>
+                        <h3 class="text-xl font-bold text-stone-800 mb-6 flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            Найближчі події
+                        </h3>
+
+                        <div class="space-y-4">
+                            <div class="bg-white rounded-xl p-6 shadow hover-card">
+                                <div class="flex gap-4">
+                                    <div class="w-16 text-center">
+                                        <div class="text-2xl font-bold text-stone-800">23</div>
+                                        <div class="text-stone-500">Груд</div>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold text-stone-800 mb-1">Початок нової кампанії</h4>
+                                        <p class="text-stone-600 mb-2">18:00 - 22:00</p>
+                                        <div class="flex gap-2">
+                                            <span class="px-2 py-1 bg-stone-100 rounded text-xs text-stone-600">3
+                                                місця</span>
+                                            <span
+                                                class="px-2 py-1 bg-stone-100 rounded text-xs text-stone-600">Офлайн</span>
+                                        </div>
+                                    </div>
                                 </div>
+                            </div>
+
+                            <!-- Add more event cards with the same structure -->
+                        </div>
+                    </div>
+
+                    <!-- News Column -->
+                    <div>
+                        <h3 class="text-xl font-bold text-stone-800 mb-6 flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                            </svg>
+                            Останні новини
+                        </h3>
+
+                        <div class="space-y-4">
+                            <div class="bg-white rounded-xl p-6 shadow hover-card">
+                                <div class="flex justify-between items-start mb-2">
+                                    <span class="text-sm text-stone-500">20 грудня</span>
+                                    <span class="px-2 py-1 bg-stone-100 rounded text-xs text-stone-600">Новина</span>
+                                </div>
+                                <h4 class="font-bold text-stone-800 mb-2">Нові книги для гравців</h4>
+                                <p class="text-stone-600">Поповнення бібліотеки: нові книги з правилами та пригодами
+                                    українською мовою.</p>
+                            </div>
+
+                            <div class="bg-white rounded-xl p-6 shadow hover-card">
+                                <div class="flex justify-between items-start mb-2">
+                                    <span class="text-sm text-stone-500">18 грудня</span>
+                                    <span class="px-2 py-1 bg-stone-100 rounded text-xs text-stone-600">Анонс</span>
+                                </div>
+                                <h4 class="font-bold text-stone-800 mb-2">Новий формат коротких сесій</h4>
+                                <p class="text-stone-600">Запускаємо експрес-формат на 2 години для тих, хто хоче
+                                    спробувати D&D у компактному форматі.</p>
+                            </div>
+
+                            <!-- Add more news cards -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <!-- <div class="text-center">
+                <a href="#" class="inline-flex items-center gap-2 text-stone-600 hover:text-stone-800 transition-colors">
+                    Всі новини та події
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About DM -->
+    <section id="about" class="py-24 bg-stone-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <!-- Top Part with Bio -->
+                    <div class="md:flex items-start p-8 border-b border-stone-100">
+                        <div class="md:w-1/3 mb-6 md:mb-0">
+                            <img src="https://place-hold.it/400x400" alt="DM Photo"
+                                class="w-full aspect-square object-cover rounded-xl shadow-lg">
+                        </div>
+
+                        <div class="md:w-2/3 md:pl-8">
+                            <h2 class="text-3xl font-bold text-stone-800 mb-4">Майстер Підземель</h2>
+
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="px-3 py-1 bg-stone-100 rounded-full text-sm text-stone-600">3+ роки
+                                    досвіду</span>
+                                <span class="px-3 py-1 bg-stone-100 rounded-full text-sm text-stone-600">D&D 5e</span>
+                                <span class="px-3 py-1 bg-stone-100 rounded-full text-sm text-stone-600">UA/ENG</span>
+                            </div>
+
+                            <p class="text-stone-600 mb-6">
+                                Привіт! Я - ваш провідник у світ настільних рольових ігор. Маю досвід проведення ігор як
+                                для новачків,
+                                так і для досвідчених гравців. Моя мета - створити захопливий ігровий досвід, де кожен
+                                гравець може
+                                розкрити свого персонажа та стати частиною епічної історії.
+                            </p>
+
+                            <div class="grid md:grid-cols-2 gap-6">
                                 <div>
-                                    <h4 class="font-bold text-stone-800">Початок нової кампанії</h4>
-                                    <p class="text-stone-600">Збір групи для тривалої кампанії</p>
+                                    <h3 class="font-bold text-stone-800 mb-3">Мій стиль гри</h3>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-center gap-2 text-stone-600">
+                                            <span class="w-1.5 h-1.5 bg-stone-400 rounded-full"></span>
+                                            Баланс рольових та бойових сцен
+                                        </li>
+                                        <li class="flex items-center gap-2 text-stone-600">
+                                            <span class="w-1.5 h-1.5 bg-stone-400 rounded-full"></span>
+                                            Увага до історій персонажів
+                                        </li>
+                                        <li class="flex items-center gap-2 text-stone-600">
+                                            <span class="w-1.5 h-1.5 bg-stone-400 rounded-full"></span>
+                                            Гнучкість правил для історії
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h3 class="font-bold text-stone-800 mb-3">Що я пропоную</h3>
+                                    <ul class="space-y-2">
+                                        <li class="flex items-center gap-2 text-stone-600">
+                                            <span class="w-1.5 h-1.5 bg-stone-400 rounded-full"></span>
+                                            Підготовлені карти та токени
+                                        </li>
+                                        <li class="flex items-center gap-2 text-stone-600">
+                                            <span class="w-1.5 h-1.5 bg-stone-400 rounded-full"></span>
+                                            Музичний супровід
+                                        </li>
+                                        <li class="flex items-center gap-2 text-stone-600">
+                                            <span class="w-1.5 h-1.5 bg-stone-400 rounded-full"></span>
+                                            Допомога з персонажами
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                        <!-- Add 2 more event cards -->
+                    </div>
+
+                    <!-- Bottom Part with Contacts -->
+                    <div class="p-8 bg-stone-50">
+                        <div class="grid md:grid-cols-3 gap-8">
+                            <!-- Contact Methods -->
+                            <div>
+                                <h3 class="font-bold text-stone-800 mb-4">Зв'язатись</h3>
+                                <div class="space-y-3">
+                                    <a href="#" class="flex items-center gap-3 text-stone-600 hover:text-stone-800">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                        </svg>
+                                        <span>Discord: username</span>
+                                    </a>
+                                    <a href="#" class="flex items-center gap-3 text-stone-600 hover:text-stone-800">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                                        </svg>
+                                        <span>Telegram: @username</span>
+                                    </a>
+                                    <a href="#" class="flex items-center gap-3 text-stone-600 hover:text-stone-800">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path
+                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                        </svg>
+                                        <span>email@example.com</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Location -->
+                            <div>
+                                <h3 class="font-bold text-stone-800 mb-4">Локація</h3>
+                                <div class="text-stone-600">
+                                    <p>Київ, [Район]</p>
+                                    <p class="mt-2">5 хвилин від метро</p>
+                                    <p class="mt-4 text-sm">Точна адреса надається після бронювання</p>
+                                </div>
+                            </div>
+
+                            <!-- Schedule -->
+                            <div>
+                                <h3 class="font-bold text-stone-800 mb-4">Графік</h3>
+                                <div class="space-y-2 text-stone-600">
+                                    <p>Пн-Пт: з 18:00</p>
+                                    <p>Сб-Нд: з 12:00</p>
+                                    <p class="mt-4 text-sm">Можливе узгодження індивідуального часу</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- About DM -->
-<section class="py-24 bg-stone-100">
-    <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto">
-            <div class="bg-white rounded-xl p-8 shadow-lg">
-                <div class="flex flex-col md:flex-row gap-8 items-start">
-                    <img src="https://place-hold.it/200x200" alt="DM" class="w-48 h-48 rounded-xl object-cover">
-                    <div>
-                        <h2 class="text-3xl font-bold text-stone-800 mb-4">Про Майстра</h2>
-                        <p class="text-stone-600 mb-6">
-                            Привіт! Я - досвідчений Майстер Підземель з 3+ років досвіду. 
-                            Моя мета - створити захопливі пригоди для гравців будь-якого рівня.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 bg-stone-100 rounded-full text-stone-600">D&D 5e</span>
-                            <span class="px-3 py-1 bg-stone-100 rounded-full text-stone-600">Pathfinder</span>
-                            <span class="px-3 py-1 bg-stone-100 rounded-full text-stone-600">Українська</span>
-                            <span class="px-3 py-1 bg-stone-100 rounded-full text-stone-600">English</span>
-                        </div>
-                        <div class="flex gap-4">
-                            <button class="px-6 py-2 bg-stone-800 text-white rounded-lg hover:bg-stone-700">
-                                Написати
-                            </button>
-                            <button class="px-6 py-2 border-2 border-stone-200 rounded-lg hover:bg-stone-50">
-                                Discord
-                            </button>
-                        </div>
-                    </div>
+                <!-- Copyright -->
+                <div class="text-center mt-8 text-stone-500">
+                    <p>© 2024 DnD Київ. Усі права захищені.</p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Footer -->
-<footer class="bg-stone-900 text-stone-400 py-16">
-    <div class="container mx-auto px-4">
-        <div class="grid md:grid-cols-4 gap-8 mb-12">
-            <div>
-                <div class="flex items-center gap-2 text-white mb-4">
-                    <span class="icon-d20 text-2xl"></span>
-                    <span class="font-bold text-xl">DnD Київ</span>
-                </div>
-                <p>Настільні рольові ігри у Києві. Створюємо незабутні пригоди разом.</p>
-            </div>
-            
-            <div>
-                <h3 class="font-bold text-white mb-4">Навігація</h3>
-                <ul class="space-y-2">
-                    <li><a href="#games" class="hover:text-white transition-colors">Ігри</a></li>
-                    <li><a href="#community" class="hover:text-white transition-colors">Спільнота</a></li>
-                    <li><a href="#schedule" class="hover:text-white transition-colors">Розклад</a></li>
-                    <li><a href="#about" class="hover:text-white transition-colors">Про мене</a></li>
-                </ul>
-            </div>
-            
-            <div>
-                <h3 class="font-bold text-white mb-4">Контакти</h3>
-                <ul class="space-y-2">
-                    <li class="flex items-center gap-2">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                        </svg>
-                        Discord: username
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                        </svg>
-                        email@example.com
-                    </li>
-                    <li class="flex items-center gap-2">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
-                        </svg>
-                        Telegram: @username
-                    </li>
-                </ul>
-            </div>
-            
-            <div>
-                <h3 class="font-bold text-white mb-4">Приєднуйтесь</h3>
-                <div class="flex gap-4">
-                    <a href="#" class="w-10 h-10 rounded-lg bg-stone-800 flex items-center justify-center hover:bg-stone-700">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                        </svg>
-                    </a>
-                    <!-- Add more social icons -->
-                </div>
-            </div>
-        </div>
-        
-        <div class="text-center pt-8 border-t border-stone-800">
-            <p>&copy; 2024 DnD Київ. Усі права захищені.</p>
-        </div>
-    </div>
-</footer>
+    <!-- Add before closing body tag -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Intersection Observer for fade-in animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
 
-<!-- Add before closing body tag -->
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    // Intersection Observer for fade-in animations
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, { threshold: 0.1 });
+            document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+            // Smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href'))?.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
 
-    // Smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href'))?.scrollIntoView({
-                behavior: 'smooth'
+            // Sticky header
+            const header = document.querySelector('nav');
+            let lastScroll = 0;
+
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+
+                if (currentScroll > lastScroll && currentScroll > 100) {
+                    header.style.transform = 'translateY(-100%)';
+                } else {
+                    header.style.transform = 'translateY(0)';
+                }
+
+                header.classList.toggle('shadow-lg', currentScroll > 0);
+                lastScroll = currentScroll;
+            });
+
+            // Hover card effects enhancement
+            document.querySelectorAll('.hover-card').forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+
+                    card.style.setProperty('--x', `${x}px`);
+                    card.style.setProperty('--y', `${y}px`);
+                });
             });
         });
-    });
 
-    // Sticky header
-    const header = document.querySelector('nav');
-    let lastScroll = 0;
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.querySelector('button[aria-label="Відкрити меню"]');
+            const mobileMenu = document.querySelector('.md\\:hidden.bg-white');
 
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll > lastScroll && currentScroll > 100) {
-            header.style.transform = 'translateY(-100%)';
-        } else {
-            header.style.transform = 'translateY(0)';
-        }
-        
-        header.classList.toggle('shadow-lg', currentScroll > 0);
-        lastScroll = currentScroll;
-    });
+            menuButton.addEventListener('click', () => {
+                const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+                menuButton.setAttribute('aria-expanded', !isExpanded);
+                mobileMenu.classList.toggle('hidden');
+            });
 
-    // Hover card effects enhancement
-    document.querySelectorAll('.hover-card').forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-
-            card.style.setProperty('--x', `${x}px`);
-            card.style.setProperty('--y', `${y}px`);
+            // Close mobile menu when clicking a link
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuButton.setAttribute('aria-expanded', 'false');
+                });
+            });
         });
-    });
-});
-</script>
+    </script>
 </body>
+
 </html>
